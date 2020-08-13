@@ -20,11 +20,9 @@ public class Controller
                 btn.setText(txt.getText());
             }
         });
-
     }
     public void set_attribute(ActionEvent ae)
     {
         btn.setText(txt.getText());
-
     }
 }
