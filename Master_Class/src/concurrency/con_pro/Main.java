@@ -1,4 +1,4 @@
-package concurrency;
+package concurrency.con_pro;
 
 import java.util.Random;
 
