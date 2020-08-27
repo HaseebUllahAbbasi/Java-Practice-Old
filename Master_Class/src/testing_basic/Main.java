@@ -1,4 +1,4 @@
-package test;
+package testing_basic;
 
 public class Main
 {
