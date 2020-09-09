@@ -1,3 +1,4 @@
+/*
 import java.util.Scanner;
 public class hackerRank
 {
@@ -31,3 +32,5 @@ public class hackerRank
 		}
 	}
 }
+
+ */

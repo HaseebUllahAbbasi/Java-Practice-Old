@@ -1,3 +1,4 @@
+/*
 import java.io.*;
 import java.util.*;
 
@@ -31,6 +32,7 @@ public class arrayJava
         
 
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+/*
     }
     public static void display(String ok)
     {
@@ -53,3 +55,8 @@ public class arrayJava
     }
 }
 
+
+
+
+
+ */

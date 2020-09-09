@@ -1,3 +1,4 @@
+/*
 import java.util.concurrent.*;
 public class SumTask extends RecursiveTask<Integer>
 {
@@ -17,7 +18,8 @@ for (int i = begin; i <= end; i++)
 sum += array[i];
 return sum;
 }
-else {
+else
+    {
 int mid = (begin + end) / 2;
 SumTask leftTask = new SumTask(begin, mid, array);
 SumTask rightTask = new SumTask(mid + 1, end, array);
@@ -27,3 +29,6 @@ rightTask. fork ();
 }
 }
 return rightTask. join () + leftTask. join ();
+
+
+ */
