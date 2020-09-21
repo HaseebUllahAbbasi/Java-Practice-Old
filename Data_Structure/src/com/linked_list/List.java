@@ -77,5 +77,6 @@ public class List
             current.next  = null;
         }
     }
+
 }
 
