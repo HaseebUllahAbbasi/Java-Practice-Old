@@ -4,6 +4,8 @@ import org.apache.pdfbox.multipdf.PDFMergerUtility;
 import org.apache.pdfbox.multipdf.Splitter;
 import org.apache.pdfbox.pdmodel.PDDocument;
 
+import javax.swing.*;
+import javax.swing.filechooser.FileSystemView;
 import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
@@ -13,8 +15,18 @@ public class Sep_Mer
 {
     public static void main(String[] args) throws IOException {
 
-        //Loading an existing PDF document
-        File file = new File("sample_2.pdf");
+        JFileChooser jfc = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
+        int returnValue = jfc.showOpenDialog(null);
+
+        if (returnValue == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = jfc.getSelectedFile();
+            String fileP = selectedFile.getPath();
+            System.out.println(fileP);
+
+        }
+
+                //Loading an existing PDF document
+        File file = jfc.getSelectedFile();
         PDDocument document = PDDocument.load(file);
 
         //Instantiating Splitter class
@@ -31,21 +43,16 @@ public class Sep_Mer
         PDDocument new_Doc = new PDDocument();
 
         //Saving each page as an individual document
-        int i = 1;
-        while(iterator.hasNext())
+        int i = 0;
+        while(i<3)
         {
-            if(i<5)
-            {
-                i++;
-                iterator.next();
-                continue;
-            }
+
             i++;
             PDDocument pd = iterator.next();
             System.out.println("i is "+i);
             PDFmerger.appendDocument(new_Doc,pd);
         }
-        new_Doc.save("sample_3.pdf");
+        new_Doc.save("solution.pdf");
         System.out.println("PDF’s created");
         document.close();
     }
