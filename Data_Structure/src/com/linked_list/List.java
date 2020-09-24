@@ -77,6 +77,13 @@ public class List
             current.next  = null;
         }
     }
+    public void delete_element(int data)
+    {
+        Link current = head;
+        Link prev = null;
+
+    }
+
 
 }
 
