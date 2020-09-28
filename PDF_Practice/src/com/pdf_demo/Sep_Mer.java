@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Scanner;
 
 public class Sep_Mer
 {
@@ -42,14 +43,17 @@ public class Sep_Mer
 
         PDDocument new_Doc = new PDDocument();
 
-        //Saving each page as an individual document
-        int i = 0;
-        while(i<3)
-        {
+        Scanner input = new Scanner(System.in);
 
-            i++;
+        int start = input.nextInt();
+        int end = input.nextInt();
+
+        //Saving each page as an individual document
+        while(start<end)
+        {
+            start++;
             PDDocument pd = iterator.next();
-            System.out.println("i is "+i);
+            System.out.println("start is "+start);
             PDFmerger.appendDocument(new_Doc,pd);
         }
         new_Doc.save("solution.pdf");
