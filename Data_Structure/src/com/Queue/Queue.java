@@ -24,5 +24,18 @@ public class Queue
             tail = node;
         }
     }
-    public
+    public Link dequeue()
+    {
+        if(head!=null&&tail!=null)
+        {
+            Link node = head;
+            head = head.next;
+            return node;
+        }
+        else
+        {
+            return null;
+        }
+
+    }
 }
