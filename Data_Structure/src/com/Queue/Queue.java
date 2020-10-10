@@ -4,10 +4,12 @@ import com.linked_list.Link;
 
 public class Queue
 {
-    Link head;
-    Link tail;
+    private Link head;
+    private Link tail;
+    private int size;
     Queue()
     {
+        size =0;
         head = null;
         tail = null;
     }
@@ -23,9 +25,11 @@ public class Queue
             tail.next = node;
             tail = node;
         }
+        size++;
     }
     public Link dequeue()
     {
+        size--;
         if(head!=null&&tail!=null)
         {
             Link node = head;
@@ -37,5 +41,9 @@ public class Queue
             return null;
         }
 
+    }
+    public int size()
+    {
+        return size;
     }
 }

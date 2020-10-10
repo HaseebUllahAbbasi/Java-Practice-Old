@@ -142,7 +142,7 @@ public class Tree
     {
         Node current = root;
         Queue<Node> queue = null;
-        queue.add(current);
+        queue.add(root);
         while (!queue.isEmpty())
         {
             Node node = queue.poll();
