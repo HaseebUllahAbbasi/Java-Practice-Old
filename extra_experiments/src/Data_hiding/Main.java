@@ -1,4 +1,5 @@
-class A 
+package Data_hiding;
+class A
 {
     int value = 9;
 

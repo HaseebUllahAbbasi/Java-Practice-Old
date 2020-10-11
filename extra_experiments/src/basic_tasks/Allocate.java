@@ -1,4 +1,5 @@
-class Allocate 
+package basic_tasks;
+class Allocate
 {
  public static void main (String[] args) 
  {

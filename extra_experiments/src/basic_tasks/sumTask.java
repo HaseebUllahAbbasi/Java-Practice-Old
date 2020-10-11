@@ -1,3 +1,4 @@
+package basic_tasks;
 /*
 import java.util.concurrent.*;
 public class SumTask extends RecursiveTask<Integer>

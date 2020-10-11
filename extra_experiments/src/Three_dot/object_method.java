@@ -1,3 +1,4 @@
+package Three_dot;
 public class object_method
 {
 	public static void call_me(Object ...object)

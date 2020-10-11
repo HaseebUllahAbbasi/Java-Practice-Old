@@ -1,19 +1,4 @@
-/**		 --------------------------------------------------------------
- * 		|		       				HiLCoE                             |                  |
- * 		|			School of Computer Science and Technology		   |
- *		|															   |
- * 		|		Welcome to JAVA-IMAGE Encryption program               |
- * 		|				CS224 : Java Lab assignment                    |
- * 		|					August 22, 2018 					   	   |
- * 		 --------------------------------------------------------------
- * 	Student Name : Beek Kefyalew			submitted to 		                     
- * 	Student ID : NP5622 					Email  : Elimangd@yahoo.com
- * 	bekidelta@gmail.com					Mobile : +251 911 108 779
- * 	
- * This program Encrypts image files with 128 bits ADVANCED ENCRYPTION STANDARD (AES) algorithm
- * It uses Java Cryptographic Extension (JCE) javax.crypto package API.
- * */
-
+package img_encrypt;
 
 //basic packages to build graphical user interfaces
 import java.awt.*;
