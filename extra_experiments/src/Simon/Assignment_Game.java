@@ -6,7 +6,11 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.util.LinkedList;
 
+<<<<<<< HEAD
 public class Assignment_Game extends JApplet implements MouseListener, Runnable, ActionListener 
+=======
+public class Assignment_Game extends JApplet implements MouseListener, Runnable, ActionListener
+>>>>>>> afe6b152532628eea9d0d5d2f81589a77a9c2eee
 {
     private static final long serialVersionUID = 1L;
     private boolean boolean_for_suspended = false;
@@ -32,7 +36,11 @@ public class Assignment_Game extends JApplet implements MouseListener, Runnable,
     private JButton red_button = new JButton();
     private JButton blue_button = new JButton();
     private JButton start_button = new JButton();
+<<<<<<< HEAD
     private JButton about_button = new JButton();
+=======
+   // private JButton about_button = new JButton();
+>>>>>>> afe6b152532628eea9d0d5d2f81589a77a9c2eee
     private JLabel label_right_wrong = new JLabel();
     private JLabel best = new JLabel();
     private JLabel score = new JLabel();
@@ -65,13 +73,21 @@ public class Assignment_Game extends JApplet implements MouseListener, Runnable,
     // Component initialization
     private void Component_Init() throws Exception
     {
+<<<<<<< HEAD
          name=JOptionPane.showInputDialog(getAppletInfo(),"Enter Name");
+=======
+        name=JOptionPane.showInputDialog(getAppletInfo(),"Enter Your Name");
+>>>>>>> afe6b152532628eea9d0d5d2f81589a77a9c2eee
 
         red_button.addActionListener(this);
         yellow_button.addActionListener(this);
         green_button.addActionListener(this);
         blue_button.addActionListener(this);
+<<<<<<< HEAD
         about_button.addActionListener(this);
+=======
+       // about_button.addActionListener(this);
+>>>>>>> afe6b152532628eea9d0d5d2f81589a77a9c2eee
         start_button.addActionListener(this);
 
         this.setSize(new Dimension(405, 325));
@@ -118,6 +134,7 @@ public class Assignment_Game extends JApplet implements MouseListener, Runnable,
         green_button.setHorizontalTextPosition(SwingConstants.CENTER);
         green_button.setSelected(false);
         green_button.addMouseListener(this);
+<<<<<<< HEAD
         start_button.setBounds(new Rectangle(15, 231, 104, 51));
         start_button.setFont(new java.awt.Font("Dialog", 1, 12));
         start_button.setText("START");
@@ -128,6 +145,22 @@ public class Assignment_Game extends JApplet implements MouseListener, Runnable,
         label_right_wrong.setHorizontalAlignment(SwingConstants.CENTER);
         label_right_wrong.setText("");
         label_right_wrong.setBounds(new Rectangle(145, 222, 122, 47));
+=======
+        start_button.setBounds(new Rectangle(15, 231, 154, 51));
+        start_button.setFont(new java.awt.Font("Dialog", 1, 12));
+        start_button.setText("START Game");
+
+        /*
+        about_button.setBounds(new Rectangle(326, 238, 60, 39));
+        about_button.setFont(new java.awt.Font("Dialog", 1, 12));
+        about_button.setText("?");
+         */
+
+        label_right_wrong.setFont(new java.awt.Font("Dialog", 1, 20));
+        label_right_wrong.setHorizontalAlignment(SwingConstants.CENTER);
+        label_right_wrong.setText("");
+        label_right_wrong.setBounds(new Rectangle(165, 222, 150, 50));
+>>>>>>> afe6b152532628eea9d0d5d2f81589a77a9c2eee
         best.setFont(new java.awt.Font("Dialog", 1, 12));
         best.setRequestFocusEnabled(true);
         best.setHorizontalAlignment(SwingConstants.LEFT);
@@ -171,7 +204,11 @@ public class Assignment_Game extends JApplet implements MouseListener, Runnable,
         jPanel2.add(blue_button, null);
         jPanel1.add(lives, null);
         jPanel1.add(jPanel3, null);
+<<<<<<< HEAD
         jPanel1.add(about_button, null);
+=======
+       // jPanel1.add(about_button, null);
+>>>>>>> afe6b152532628eea9d0d5d2f81589a77a9c2eee
         jPanel1.add(best, null);
         jPanel1.add(score, null);
         jPanel1.add(label_right_wrong, null);
@@ -336,7 +373,11 @@ public class Assignment_Game extends JApplet implements MouseListener, Runnable,
                     boolean_for_suspended = true;
                     if (boolean_color_mix)
                         break;
+<<<<<<< HEAD
                     label_right_wrong.setText("GO !");
+=======
+                    label_right_wrong.setText("Guess !");
+>>>>>>> afe6b152532628eea9d0d5d2f81589a77a9c2eee
                     th2.suspend();
                     boolean_for_suspended = false;
                     try {
@@ -365,11 +406,19 @@ public class Assignment_Game extends JApplet implements MouseListener, Runnable,
     public void actionPerformed(ActionEvent e)
     {
         object = e.getSource();
+<<<<<<< HEAD
         if (object == about_button)
             LeaderBoard();
         else if (object == start_button)
         {
             if (boolean_color_mix) 
+=======
+        //if (object == about_button)
+          //  LeaderBoard();
+        if (object == start_button)
+        {
+            if (boolean_color_mix)
+>>>>>>> afe6b152532628eea9d0d5d2f81589a77a9c2eee
             {
                 boolean_color_mix = !boolean_color_mix;
                 list = new LinkedList<Integer>();
@@ -384,7 +433,11 @@ public class Assignment_Game extends JApplet implements MouseListener, Runnable,
                 th2.start();
             }
             else
+<<<<<<< HEAD
                 {
+=======
+            {
+>>>>>>> afe6b152532628eea9d0d5d2f81589a77a9c2eee
                 parameters();
             }
         }
