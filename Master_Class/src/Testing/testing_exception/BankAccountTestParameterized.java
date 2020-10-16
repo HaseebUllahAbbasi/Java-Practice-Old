@@ -1,8 +1,8 @@
-package testing_exception;
+package Testing.testing_exception;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import testing_basic.BankAccount;
+import Testing.testing_basic.BankAccount;
 
 import java.util.Arrays;
 import java.util.Collection;

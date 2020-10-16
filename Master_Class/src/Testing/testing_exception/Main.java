@@ -1,4 +1,4 @@
-package testing_exception;
+package Testing.testing_exception;
 
 public class Main {
 

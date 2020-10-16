@@ -1,4 +1,4 @@
-package testingPractice;
+package Testing.testingPractice;
 
 public class Main
 {

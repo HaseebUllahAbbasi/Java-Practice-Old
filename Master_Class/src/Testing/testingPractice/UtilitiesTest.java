@@ -1,4 +1,4 @@
-package testingPractice;
+package Testing.testingPractice;
 
 import org.junit.After;
 import org.junit.Before;

@@ -1,4 +1,4 @@
-package testing_basic;
+package Testing.testing_basic;
 
 public class BankAccount
 {
