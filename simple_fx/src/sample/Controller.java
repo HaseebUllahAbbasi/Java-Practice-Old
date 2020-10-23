@@ -14,12 +14,18 @@ public class Controller
     private TextField txt;
     public void initlize()
     {
+        /*
         btn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 btn.setText(txt.getText());
             }
         });
+
+         */
+
+        btn.setOnAction(e->{btn.setText(txt.getText());});
+
     }
     public void set_attribute(ActionEvent ae)
     {
