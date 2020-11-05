@@ -16,7 +16,7 @@ public class Main extends Application
         primaryStage.setTitle("Image Dragging");
         primaryStage.setScene(scene);
         primaryStage.show();
-        (new StringBuffer()).append("i");
+
     }
     public static void main(String[] args) {
         launch(args);

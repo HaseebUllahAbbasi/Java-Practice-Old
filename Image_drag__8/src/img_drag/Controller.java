@@ -3,6 +3,9 @@ package img_drag;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Background;
+
 public class Controller
 {
     @FXML ImageView img = new ImageView();

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.TilePane?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="img_drag.Controller">
+
+   <TilePane layoutY="200.0" prefHeight="200.0" prefWidth="124.0" style="-fx-background-color: pink;">
+      <children>
+         <ImageView fx:id="img" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#pressed" onMouseDragged="#pressed" onMouseReleased="#release" pickOnBounds="true" preserveRatio="true">
+            <Image url="@commonMilkweed.png" />
+         </ImageView>
+      </children>
+   </TilePane>
+   <ImageView fx:id="img1" fitHeight="150.0" fitWidth="200.0" layoutX="4.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@commonMilkweed.png" />
+      </image>
+   </ImageView>
+   <FlowPane layoutX="181.0" layoutY="17.0" onDragDetected="#drag_detected" onDragDone="#drag_done" onDragDropped="#drag_droped" onDragEntered="#drag_entered" onDragExited="#drag_exited" onMouseDragEntered="#mouse_drag_entered" onMouseDragExited="#mouse_drag_exit" onMouseDragReleased="#drag_released" prefHeight="369.0" prefWidth="405.0" style="-fx-background-color: teal;" />
+</AnchorPane>
