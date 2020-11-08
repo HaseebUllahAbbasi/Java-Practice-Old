@@ -48,7 +48,5 @@ public class Main
     -- Create and start the client application
 
 
-
-
      */
 }
