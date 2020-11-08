@@ -1,4 +1,4 @@
-   public static class ByteValues
+/*   public static class ByteValues
       {
         public static Dictionary<byte, string> ByteDictionary;
 
@@ -179,3 +179,5 @@
 
 
 }
+
+ */
