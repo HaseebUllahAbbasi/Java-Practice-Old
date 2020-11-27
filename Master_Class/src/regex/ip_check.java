@@ -7,7 +7,8 @@ import java.util.Scanner;
 public class ip_check
 {
 
-    public static void main(String[] args){
+    public static void main(String[] args)
+    {
         Scanner in = new Scanner(System.in);
         while(in.hasNext()){
             String IP = in.next();
