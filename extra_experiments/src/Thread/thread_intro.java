@@ -1,3 +1,5 @@
+package Thread;
+
 /*
 concurrency is the ability to run several programs or several parts of a program in parallel
 .. achieve high performance
@@ -31,7 +33,7 @@ Provide a Runnable object. The Runnable interface defines a single method, run, 
 
 
 */
-public class HelloRunnable implements Runnable 
+public class thread_intro implements Runnable
 {
 	
 	public void start()
@@ -44,8 +46,8 @@ public class HelloRunnable implements Runnable
     }
 
     public static void main(String args[]) {
-        (new Thread(new HelloRunnable())).start();
-    	HelloRunnable obj = new HelloRunnable();
+        (new Thread(new thread_intro())).start();
+    	thread_intro obj = new thread_intro();
     	obj.start();
 
     }

@@ -15,7 +15,5 @@ public class Recursive
             return search(array,value,left,mid-1);
         else
             return search(array,value,mid+1,right);
-
     }
-
 }
