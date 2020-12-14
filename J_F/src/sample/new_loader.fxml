@@ -1,113 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.ProgressIndicator?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ButtonBar?>
-<?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.ColorPicker?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Hyperlink?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuButton?>
+<?import com.gluonhq.charm.glisten.control.AppBar?>
+<?import com.gluonhq.charm.glisten.control.AutoCompleteTextField?>
+<?import com.gluonhq.charm.glisten.control.Avatar?>
+<?import com.gluonhq.charm.glisten.control.BottomNavigation?>
+<?import com.gluonhq.charm.glisten.control.BottomNavigationButton?>
+<?import com.gluonhq.charm.glisten.control.CardPane?>
+<?import com.gluonhq.charm.glisten.control.Chip?>
+<?import com.gluonhq.charm.glisten.control.DropdownButton?>
+<?import com.gluonhq.charm.glisten.control.ExpansionPanel?>
+<?import com.gluonhq.charm.glisten.control.ExpansionPanelContainer?>
+<?import com.gluonhq.charm.glisten.control.Icon?>
+<?import com.gluonhq.charm.glisten.control.SettingsPane?>
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import com.gluonhq.charm.glisten.control.ToggleButtonGroup?>
+<?import com.gluonhq.charm.glisten.layout.Layer?>
+<?import com.gluonhq.charm.glisten.mvc.SplashView?>
+<?import com.gluonhq.charm.glisten.mvc.View?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.Pagination?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.ProgressBar?>
-<?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.Slider?>
-<?import javafx.scene.control.Spinner?>
-<?import javafx.scene.control.SplitMenuButton?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.TreeView?>
-<?import javafx.scene.effect.Blend?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.media.MediaView?>
-<?import javafx.scene.web.HTMLEditor?>
-<?import javafx.scene.web.WebView?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="904.0" prefWidth="1147.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="793.0" prefWidth="938.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Button layoutX="232.0" layoutY="123.0" mnemonicParsing="false" onAction="#start_thread" prefHeight="41.0" prefWidth="75.0" text="Button" />
-      <AnchorPane fx:id="bar" layoutX="71.0" layoutY="232.0">
-         <children>
-            <ProgressBar fx:id="progressBar" prefHeight="32.0" prefWidth="236.0" progress="0.0" />
-         </children>
-      </AnchorPane>
-      <ProgressIndicator layoutX="335.0" layoutY="26.0" opacity="0.41" prefHeight="51.0" prefWidth="47.0" progress="0.28" radius="50.0">
-         <effect>
-            <Blend />
-         </effect>
-      </ProgressIndicator>
-      <TextArea layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" promptText="please write here " />
-      <TextField layoutX="25.0" layoutY="300.0" promptText="This is  ok " />
-      <AnchorPane layoutX="14.0" layoutY="335.0" prefHeight="200.0" prefWidth="200.0" />
-      <ButtonBar layoutX="222.0" layoutY="543.0" opacity="0.77" prefHeight="40.0" prefWidth="200.0">
-        <buttons>
-          <Button mnemonicParsing="false" text="Button" />
-        </buttons>
-      </ButtonBar>
-      <CheckBox layoutX="25.0" layoutY="578.0" mnemonicParsing="false" text="CheckBox" />
-      <ChoiceBox layoutX="39.0" layoutY="535.0" prefWidth="150.0" />
-      <ColorPicker layoutX="46.0" layoutY="618.0" />
-      <ComboBox layoutX="195.0" layoutY="618.0" prefWidth="150.0" />
-      <DatePicker layoutX="232.0" layoutY="492.0" />
-      <HTMLEditor htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="472.0" layoutY="456.0" prefHeight="200.0" prefWidth="506.0" />
-      <Hyperlink layoutX="306.0" layoutY="445.0" text="Hyperlink" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="207.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true" />
-      <ListView layoutX="490.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" />
-      <MediaView fitHeight="200.0" fitWidth="200.0" layoutX="761.0" layoutY="14.0" />
-      <MenuBar layoutX="846.0" layoutY="252.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
-      <MenuButton layoutX="847.0" layoutY="300.0" mnemonicParsing="false" text="MenuButton">
-        <items>
-          <MenuItem mnemonicParsing="false" text="Action 1" />
-          <MenuItem mnemonicParsing="false" text="Action 2" />
-        </items>
-      </MenuButton>
-      <Pagination layoutX="611.0" layoutY="241.0" prefHeight="200.0" prefWidth="200.0" />
-      <PasswordField layoutX="820.0" layoutY="387.0" />
-      <PasswordField layoutX="822.0" layoutY="423.0" promptText="progress field" />
-      <RadioButton layoutX="357.0" layoutY="626.0" mnemonicParsing="false" text="RadioButton" />
-      <Slider layoutX="426.0" layoutY="416.0" value="5.0" />
-      <Spinner layoutX="426.0" layoutY="360.0" />
-      <SplitMenuButton layoutX="431.0" layoutY="314.0" mnemonicParsing="false" text="SplitMenuButton">
-        <items>
-          <MenuItem mnemonicParsing="false" text="Action 1" />
-          <MenuItem mnemonicParsing="false" text="Action 2" />
-        </items>
-      </SplitMenuButton>
-      <TableView layoutX="14.0" layoutY="668.0" prefHeight="200.0" prefWidth="200.0">
-        <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
-        </columns>
-      </TableView>
-      <TreeView layoutX="239.0" layoutY="690.0" prefHeight="200.0" prefWidth="200.0" />
-      <WebView layoutX="639.0" layoutY="668.0" prefHeight="200.0" prefWidth="200.0" />
+      <AppBar layoutX="38.0" layoutY="26.0" titleText="AppBar" />
+      <AutoCompleteTextField layoutX="309.0" layoutY="41.0" />
+      <Avatar layoutX="50.0" layoutY="125.0" />
+      <BottomNavigation layoutX="203.0" layoutY="131.0">
+          <actionItems>
+              <BottomNavigationButton selected="true" text="Recent">
+                  <graphic>
+                      <Icon content="RECENT_ACTORS" />
+                  </graphic>
+              </BottomNavigationButton>
+              <BottomNavigationButton text="Favourite">
+                  <graphic>
+                      <Icon content="FAVORITE" />
+                  </graphic>
+              </BottomNavigationButton>
+              <BottomNavigationButton text="Nearby">
+                  <graphic>
+                      <Icon content="NEAR_ME" />
+                  </graphic>
+              </BottomNavigationButton>
+            <BottomNavigationButton />
+          </actionItems>
+      </BottomNavigation>
+      <CardPane layoutX="26.0" layoutY="210.0">
+          <Label style="-fx-padding:10;" text="label1" />
+          <Label style="-fx-padding:10;" text="label2" />
+          <Label style="-fx-padding:10;" text="label3" />
+      </CardPane>
+      <Chip layoutX="337.0" layoutY="229.0" text="Chip" />
+      <DropdownButton layoutX="309.0" layoutY="324.0">
+          <items>
+              <MenuItem text="Choice 1" />
+              <MenuItem text="Choice 2" />
+              <MenuItem text="Choice 3" />
+          </items>
+      </DropdownButton>
+      <ExpansionPanel layoutX="318.0" layoutY="359.0" />
+      <ExpansionPanelContainer layoutX="319.0" layoutY="423.0">
+          <items>
+              <ExpansionPanel>
+                  <collapsedContent>
+
+                  </collapsedContent>
+              </ExpansionPanel>
+              <ExpansionPanel>
+                  <collapsedContent>
+
+                  </collapsedContent>
+              </ExpansionPanel>
+          </items>
+      </ExpansionPanelContainer>
+      <Icon content="ACCESS_ALARMS" layoutX="318.0" layoutY="533.0" />
+      <Label layoutX="384.0" layoutY="525.0" text="icon contains  hundreds of icons" />
+      <Layer layoutX="564.0" layoutY="41.0" />
+      <SettingsPane layoutX="545.0" layoutY="80.0" />
+      <SplashView layoutX="544.0" layoutY="188.0" prefHeight="44.0" prefWidth="67.0" />
+      <TextField layoutX="596.0" layoutY="280.0" />
+      <ToggleButtonGroup layoutX="611.0" layoutY="338.0" selectionType="SINGLE">
+          <toggles>
+              <ToggleButton>
+                  <graphic>
+                      <Icon content="FORMAT_ALIGN_LEFT" />
+                  </graphic>
+              </ToggleButton>
+              <ToggleButton selected="true">
+                  <graphic>
+                      <Icon content="FORMAT_ALIGN_CENTER" />
+                  </graphic>
+              </ToggleButton>
+              <ToggleButton>
+                  <graphic>
+                      <Icon content="FORMAT_ALIGN_RIGHT" />
+                  </graphic>
+              </ToggleButton>
+          </toggles>
+      </ToggleButtonGroup>
+      <View layoutX="655.0" layoutY="423.0" prefHeight="66.0" prefWidth="77.0" />
    </children>
 </AnchorPane>

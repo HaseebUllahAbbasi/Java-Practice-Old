@@ -1,3 +1,5 @@
+import jdk.nashorn.internal.parser.JSONParser;
+
 public class Simple_Main
 {
     public static void main(String[] args)
@@ -12,5 +14,6 @@ class Simple implements Simple_Interface
     @Override
     public void call_me_method() {
         System.out.println("call me method is called of the interface");
+
     }
 }
