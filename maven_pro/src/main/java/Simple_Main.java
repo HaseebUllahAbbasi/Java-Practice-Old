@@ -6,6 +6,7 @@ public class Simple_Main
     {
         Simple_Interface simple_object = new Simple();
         simple_object.call_me_method();
+
     }
 }
 class Simple implements Simple_Interface
