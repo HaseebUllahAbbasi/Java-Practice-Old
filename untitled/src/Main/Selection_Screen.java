@@ -75,4 +75,44 @@ public class Selection_Screen
         primaryStage.setScene(scene);
         primaryStage.show();
     }
+
+    public void change_scores(ActionEvent actionEvent) throws IOException
+    {
+        ((Node) actionEvent.getSource()).getScene().getWindow().hide();
+        Stage primaryStage = new Stage();
+        FXMLLoader loader = new FXMLLoader();
+        Pane root = loader.load(getClass().getResource("scores_change.fxml").openStream());
+        //root.getStylesheets().add(getClass().getResource("dashboard.css").toExternalForm());
+        Scene scene = new Scene(root);
+        primaryStage.setTitle("Game");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+    }
+
+    public void chose_placement(ActionEvent actionEvent) throws IOException {
+        ((Node) actionEvent.getSource()).getScene().getWindow().hide();
+        Stage primaryStage = new Stage();
+        FXMLLoader loader = new FXMLLoader();
+        Pane root = loader.load(getClass().getResource("Chose_Ship_Placement.fxml").openStream());
+        //root.getStylesheets().add(getClass().getResource("dashboard.css").toExternalForm());
+        Scene scene = new Scene(root);
+        primaryStage.setTitle("Game");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+
+    }
+
+    public void rules(ActionEvent actionEvent) throws IOException {
+        ((Node) actionEvent.getSource()).getScene().getWindow().hide();
+        Stage primaryStage = new Stage();
+        FXMLLoader loader = new FXMLLoader();
+        Pane root = loader.load(getClass().getResource("Rules.fxml").openStream());
+        //root.getStylesheets().add(getClass().getResource("dashboard.css").toExternalForm());
+        Scene scene = new Scene(root);
+        primaryStage.setTitle("Game");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
 }

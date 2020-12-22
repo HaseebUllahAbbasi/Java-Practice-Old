@@ -1,9 +1,6 @@
 package Main;
 
-import Ships.BattleShip;
-import Ships.Carrier;
-import Ships.Ship;
-import Ships.SubMarine;
+import Ships.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,9 +12,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.util.Random;
 import java.util.ResourceBundle;
@@ -28,7 +27,9 @@ public class Game_Screen implements Initializable
     @FXML Label label_score_1;
     Alert alert;
     Random random = new Random();
+    int button_clicked = 0;
 
+    static boolean random_data = true;
     @FXML Button button_0_0;
     @FXML Button button_0_1;
     @FXML Button button_0_2;
@@ -97,7 +98,11 @@ public class Game_Screen implements Initializable
     Button_Structure[][] button_structure_2 = new Button_Structure[8][8];
     @FXML Label player_status;
     boolean player_one = true;
-    public void quit_game(ActionEvent actionEvent) throws IOException {
+    static int player_one_score = 100;
+    static int player_two_score = 100;
+
+    public void quit_game(ActionEvent actionEvent) throws IOException
+    {
         ((Node) actionEvent.getSource()).getScene().getWindow().hide();
         Stage primaryStage = new Stage();
         FXMLLoader loader = new FXMLLoader();
@@ -130,16 +135,141 @@ public class Game_Screen implements Initializable
                 button_structure_2[i][j] = new Button_Structure();
             }
         }
-        create_carriers(button_structure_1);
-        create_carriers(button_structure_2);
-        create_battleship(button_structure_1);
-        create_battleship(button_structure_2);
-        create_submarine(button_structure_1);
-        create_submarine(button_structure_2);
-        create_destroyer(button_structure_1);
-        create_destroyer(button_structure_2);
+        if(random_data)
+        {
+            create_carriers(button_structure_1);
+            create_carriers(button_structure_2);
+            create_battleship(button_structure_1);
+            create_battleship(button_structure_2);
+            create_submarine(button_structure_1);
+            create_submarine(button_structure_2);
+            create_destroyer(button_structure_1);
+            create_destroyer(button_structure_2);
+        }
+        else
+        {
+            int input = 0;
+            String data = "";
+            FileReader fileReader = null;
+            try {
+                fileReader = new FileReader("src/input/input_1.txt");
+            } catch (FileNotFoundException e)
+            {
+                alert = new Alert(Alert.AlertType.ERROR, "Error in File Reading", ButtonType.OK);
+                alert.showAndWait();
+                return;
+            }
+            int number = 0;
+            int i=0;
+
+            while (true)
+            {
+                assert fileReader != null;
+                try {
+                    if (!((input=fileReader.read()) != -1)) break;
+                } catch (IOException exception) {
+                    alert = new Alert(Alert.AlertType.ERROR, "Error in File Reading", ButtonType.OK);
+                    alert.showAndWait();
+                    return;
+                }
+                if(i++==0)
+                    number = input-48;
+                else
+                    data+= (char)input;
+            }
+        //    System.out.print(number);
+          //  System.out.println();
+            String[] array = (data.split(";"));
+            for(int h=0; h< array.length; h++)
+            {
+               // System.out.println(h+" "+array[h]+" ");
+            }
+
+            String[] carrier_1 = array[1].split("\\*");
+            String[] carrier_2 = array[2].split("\\*");
+            String[] carrier_3 = array[3].split("\\*");
+            String[] carrier_4 = array[4].split("\\*");
+            String[] carrier_5 = array[5].split("\\*");
+
+            String[] battleship_1 = array[6].split("\\*");
+            String[] battleship_2 = array[7].split("\\*");
+            String[] battleship_3 = array[8].split("\\*");
+            String[] battleship_4 = array[9].split("\\*");
+
+            String[]  subMarine_1 = array[10].split("\\*");
+            String[] subMarine_2 = array[11].split("\\*");
+            String[] subMarine_3 = array[12].split("\\*");
+
+            String[]  destroyer_1 = array[13].split("\\*");
+            String[] destroyer_2 = array[14].split("\\*");
 
 
+            create_carriers(button_structure_1,carrier_1,carrier_2,carrier_3,carrier_4,carrier_5);
+            create_submarine(button_structure_1,subMarine_1,subMarine_2,subMarine_3);
+            create_battleship(button_structure_1,battleship_1,battleship_2,battleship_3,battleship_4);
+            create_destroyer(button_structure_1,destroyer_1,destroyer_2);
+
+            input = 0;
+            data = "";
+            fileReader = null;
+            try {
+                fileReader = new FileReader("src/input/input_1.txt");
+            } catch (FileNotFoundException e)
+            {
+                alert = new Alert(Alert.AlertType.ERROR, "Error in File Reading", ButtonType.OK);
+                alert.showAndWait();
+                return;
+            }
+             number = 0;
+             i=0;
+
+            while (true)
+            {
+                assert fileReader != null;
+                try {
+                    if (!((input=fileReader.read()) != -1)) break;
+                } catch (IOException exception) {
+                    alert = new Alert(Alert.AlertType.ERROR, "Error in File Reading", ButtonType.OK);
+                    alert.showAndWait();
+                    return;
+                }
+                if(i++==0)
+                    number = input-48;
+                else
+                    data+= (char)input;
+            }
+          //  System.out.print(number);
+            //System.out.println();
+            array = (data.split(";"));
+            for(int h=0; h< array.length; h++)
+            {
+           //    System.out.println(h+" "+array[h]+" ");
+            }
+
+             carrier_1 = array[1].split("\\*");
+             carrier_2 = array[2].split("\\*");
+             carrier_3 = array[3].split("\\*");
+             carrier_4 = array[4].split("\\*");
+             carrier_5 = array[5].split("\\*");
+
+             battleship_1 = array[6].split("\\*");
+             battleship_2 = array[7].split("\\*");
+             battleship_3 = array[8].split("\\*");
+             battleship_4 = array[9].split("\\*");
+
+             subMarine_1 = array[10].split("\\*");
+             subMarine_2 = array[11].split("\\*");
+             subMarine_3 = array[12].split("\\*");
+
+              destroyer_1 = array[13].split("\\*");
+             destroyer_2 = array[14].split("\\*");
+
+            create_carriers(button_structure_2,carrier_1,carrier_2,carrier_3,carrier_4,carrier_5);
+            create_submarine(button_structure_2,subMarine_1,subMarine_2,subMarine_3);
+            create_battleship(button_structure_2,battleship_1,battleship_2,battleship_3,battleship_4);
+            create_destroyer(button_structure_2,destroyer_1,destroyer_2);
+
+        }
         button_structure_2[0][0].set_button(button_0_0);
         button_structure_2[0][1].set_button(button_0_1);
         button_structure_2[0][2].set_button(button_0_2);
@@ -285,6 +415,42 @@ public class Game_Screen implements Initializable
         button_structure_1[7][7].set_button(button_7_7);
     }
 
+    private void create_destroyer(Button_Structure[][] array, String[]... paths)
+    {
+        Ship ship = new Destroyer();
+        for(String[] path : paths)
+        {
+            array[Integer.parseInt(path[0])-1][path[1].charAt(0)-48-1].set_ship(ship);
+        }
+    }
+
+    private void create_battleship(Button_Structure[][] array, String[]... paths)
+    {
+        Ship ship = new BattleShip();
+        for(String[] path : paths)
+        {
+            array[Integer.parseInt(path[0])-1][path[1].charAt(0)-48-1].set_ship(ship);
+        }
+    }
+
+    private void create_submarine(Button_Structure[][] array,String[]... paths)
+    {
+        Ship ship = new SubMarine();
+        for(String[] path : paths)
+        {
+            array[Integer.parseInt(path[0])-1][path[1].charAt(0)-48-1].set_ship(ship);
+        }
+    }
+
+    void create_carriers(Button_Structure[][] array,String[]... paths)
+    {
+        Ship ship = new Carrier();
+        for(String[] path : paths)
+        {
+            array[Integer.parseInt(path[0])-1][path[1].charAt(0)-48-1].set_ship(ship);
+        }
+    }
+
     private void create_destroyer(Button_Structure[][] array)
     {
 
@@ -293,26 +459,48 @@ public class Game_Screen implements Initializable
         int ship_no_col = random.nextInt(7)%7;
         if(random.nextBoolean())
         {
-            if(!check_carrier_row(array,ship_no_row,ship_no_col,2) && !check_battleship_row(array,ship_no_row,ship_no_col,2) )
+            if(!check_carrier_row(array,ship_no_row,ship_no_col,2) && !check_battleship_row(array,ship_no_row,ship_no_col,2) && !check_submarine_col(array,ship_no_row,ship_no_col,2))
                 for(int i=ship_no_col; i<ship_no_col+2; i++)
                 {
                     array[ship_no_row][i].set_ship(carrier_1);
-                    System.out.println("submarine "+array[ship_no_row][i]+ "["+ship_no_row+"]["+i+"]");
+            //        System.out.println("submarine "+array[ship_no_row][i]+ "["+ship_no_row+"]["+i+"]");
                 }
             else
                 create_submarine(array);
         }
         else
         {
-            if(!check_carrier_col(array,ship_no_row,ship_no_col,2) && !check_battleship_col(array,ship_no_row,ship_no_col,2))
+            if(!check_carrier_col(array,ship_no_row,ship_no_col,2) && !check_battleship_col(array,ship_no_row,ship_no_col,2) && !check_submarine_row(array,ship_no_row,ship_no_col,2))
                 for(int i=ship_no_row; i<ship_no_row+2; i++)
                 {
                     array[i][ship_no_col].set_ship(carrier_1);
-                    System.out.println("submarine "+array[i][ship_no_col]+ "["+i+"]["+ship_no_col+"]");
+              //      System.out.println("submarine "+array[i][ship_no_col]+ "["+i+"]["+ship_no_col+"]");
                 }
             else
                 create_submarine(array);
         }
+    }
+
+    private boolean check_submarine_row(Button_Structure[][] array, int ship_no_row, int ship_no_col, int size)
+    {
+        for(int i=ship_no_row; i<ship_no_row+size; i++)
+        {
+            if(array[i][ship_no_col].check())
+                return true;
+        }
+        return false;
+
+    }
+
+
+    private boolean check_submarine_col(Button_Structure[][] array, int ship_no_row, int ship_no_col, int size)
+    {
+        for(int i=ship_no_col; i<ship_no_col+size; i++)
+        {
+            if(array[ship_no_row][i].check())
+                return true;
+        }
+        return false;
     }
 
     private void create_submarine(Button_Structure[][] array)
@@ -326,7 +514,7 @@ public class Game_Screen implements Initializable
                 for(int i=ship_no_col; i<ship_no_col+3; i++)
                 {
                     array[ship_no_row][i].set_ship(carrier_1);
-                    System.out.println("submarine "+array[ship_no_row][i]+ "["+ship_no_row+"]["+i+"]");
+              //      System.out.println("submarine "+array[ship_no_row][i]+ "["+ship_no_row+"]["+i+"]");
                 }
             else
                 create_submarine(array);
@@ -337,7 +525,7 @@ public class Game_Screen implements Initializable
                 for(int i=ship_no_row; i<ship_no_row+3; i++)
                 {
                     array[i][ship_no_col].set_ship(carrier_1);
-                    System.out.println("submarine "+array[i][ship_no_col]+ "["+i+"]["+ship_no_col+"]");
+                //    System.out.println("submarine "+array[i][ship_no_col]+ "["+i+"]["+ship_no_col+"]");
                 }
             else
                 create_submarine(array);
@@ -375,7 +563,7 @@ public class Game_Screen implements Initializable
                 for(int i=ship_no_col; i<ship_no_col+4; i++)
                 {
                     array[ship_no_row][i].set_ship(carrier_1);
-                    System.out.println("battle_ship "+array[ship_no_row][i]+ "["+ship_no_row+"]["+i+"]");
+                 //   System.out.println("battle_ship "+array[ship_no_row][i]+ "["+ship_no_row+"]["+i+"]");
                 }
             else
                 create_battleship(array);
@@ -386,7 +574,7 @@ public class Game_Screen implements Initializable
                 for(int i=ship_no_row; i<ship_no_row+4; i++)
                 {
                     array[i][ship_no_col].set_ship(carrier_1);
-                    System.out.println("battle_ship "+array[i][ship_no_col]+ "["+i+"]["+ship_no_col+"]");
+                   // System.out.println("battle_ship "+array[i][ship_no_col]+ "["+i+"]["+ship_no_col+"]");
                 }
             else
                 create_battleship(array);
@@ -422,19 +610,19 @@ public class Game_Screen implements Initializable
             for(int i=ship_no_col; i<ship_no_col+4; i++)
             {
                 array[ship_no_row][i].set_ship(carrier_1);
-                System.out.println("carrier "+array[ship_no_row][i]+ "["+ship_no_row+"]["+i+"]");
+               // System.out.println("carrier "+array[ship_no_row][i]+ "["+ship_no_row+"]["+i+"]");
             }
         else
             for(int i=ship_no_row; i<ship_no_row+4; i++)
             {
                 array[i][ship_no_col].set_ship(carrier_1);
-                System.out.println("carrier "+array[i][ship_no_col]+ "["+i+"]["+ship_no_col+"]");
+                //System.out.println("carrier "+array[i][ship_no_col]+ "["+i+"]["+ship_no_col+"]");
             }
     }
 
-    public void perform_action(ActionEvent actionEvent)
-    {
+    public void perform_action(ActionEvent actionEvent) throws IOException {
         Button btn =((Button)actionEvent.getSource());
+       // System.out.print(btn.getTextFill());
         String[] array = btn.getText().split(" ");
         if(player_one && btn.getStyle().contains("-fx-background-color: silver") && !btn.getStyle().contains("-fx-background-color: lightblue") && !btn.getStyle().contains("-fx-background-color: pink") )
         {
@@ -443,22 +631,50 @@ public class Game_Screen implements Initializable
             {
                 if(button_structure_1[Integer.parseInt(array[0])][Integer.parseInt(array[1])].destroy(btn))
                 {
-                    score_1+=100;
+                    button_clicked++;
+                    score_1+= player_one_score;
                     label_score_1.setText(String.valueOf(score_1));
                     destroyed_points_1++;
                     button_structure_1[Integer.parseInt(array[0])][Integer.parseInt(array[1])].set_button(btn);
-                    if(destroyed_points_1==5)
+                    if(destroyed_points_1==14)
                     {
                         alert = new Alert(Alert.AlertType.INFORMATION, "Player 1 has won", ButtonType.OK);
                         alert.showAndWait();
+
+                        try {
+                            FileWriter fileWriter = new FileWriter("src/data/data.txt");
+                            fileWriter.append("player_1,"+score_1+",\n");
+                            fileWriter.close();
+
+                            alert = new Alert(Alert.AlertType.CONFIRMATION,"The Game is Ended",ButtonType.FINISH);
+                            alert.showAndWait();
+                            ((Node) actionEvent.getSource()).getScene().getWindow().hide();
+                            Stage primaryStage = new Stage();
+                            FXMLLoader loader = new FXMLLoader();
+                            Pane root = loader.load(getClass().getResource("Selection_Screen.fxml").openStream());
+                            //root.getStylesheets().add(getClass().getResource("dashboard.css").toExternalForm());
+                            Scene scene = new Scene(root);
+                            primaryStage.setTitle("Game");
+                            primaryStage.setScene(scene);
+                            primaryStage.show();
+
+                        } catch (IOException exception) {
+                            exception.printStackTrace();
+                        }
                     }
                 }
             }
             else
+            {
                 btn.setStyle("-fx-background-color: lightblue");
+                btn.setTextFill(Paint.valueOf("0xADD8E6"));
+                button_clicked++;
+            }
             player_status.setText("Player 2");
             set_first_plater_button();
             load_second_player_buttons();
+            if(button_clicked==64)
+                draw_game(actionEvent);
         }
         else if(btn.getStyle().contains("-fx-background-color: silver") && !player_one && !btn.getStyle().contains("-fx-background-color: lightblue") && !btn.getStyle().contains("-fx-background-color: pink") )
         {
@@ -467,24 +683,71 @@ public class Game_Screen implements Initializable
             {
                 if(button_structure_2[Integer.parseInt(array[0])][Integer.parseInt(array[1])].destroy(btn))
                 {
-                    score_2+=100;
+                    button_clicked++;
+                    score_2+= player_two_score;
                     label_score_2.setText(String.valueOf(score_2));
                     button_structure_2[Integer.parseInt(array[0])][Integer.parseInt(array[1])].set_button(btn);
                     destroyed_points_2++;
-                    if(destroyed_points_2==5)
+                    if(destroyed_points_2==14)
                     {
                         alert = new Alert(Alert.AlertType.INFORMATION, "Player 2 has won", ButtonType.OK);
                         alert.showAndWait();
+
+                        try {
+                            FileWriter fileWriter = new FileWriter("src/data/data.txt");
+                            fileWriter.append("player_2,"+score_2+",\n");
+                            fileWriter.close();
+
+                            alert = new Alert(Alert.AlertType.CONFIRMATION,"The Game is Ended",ButtonType.FINISH);
+                            alert.showAndWait();
+                            ((Node) actionEvent.getSource()).getScene().getWindow().hide();
+                            Stage primaryStage = new Stage();
+                            FXMLLoader loader = new FXMLLoader();
+                            Pane root = loader.load(getClass().getResource("Selection_Screen.fxml").openStream());
+                            //root.getStylesheets().add(getClass().getResource("dashboard.css").toExternalForm());
+                            Scene scene = new Scene(root);
+                            primaryStage.setTitle("Game");
+                            primaryStage.setScene(scene);
+                            primaryStage.show();
+
+                        } catch (IOException exception) {
+                            exception.printStackTrace();
+                        }
                     }
                 }
             }
             else
+            {
                 btn.setStyle("-fx-background-color: lightblue");
+                btn.setTextFill(Paint.valueOf("0xADD8E6"));
+                button_clicked++;
+            }
             player_status.setText("Player 1");
             set_second_plater_button();
             load_first_player_buttons();
+            if(button_clicked==64)
+                draw_game(actionEvent);
+
         }
     }
+
+    private void draw_game(ActionEvent actionEvent) throws IOException
+    {
+        alert = new Alert(Alert.AlertType.CONFIRMATION,"The Game is Draw",ButtonType.FINISH);
+        alert.showAndWait();
+        ((Node) actionEvent.getSource()).getScene().getWindow().hide();
+        Stage primaryStage = new Stage();
+        FXMLLoader loader = new FXMLLoader();
+        Pane root = loader.load(getClass().getResource("Selection_Screen.fxml").openStream());
+        //root.getStylesheets().add(getClass().getResource("dashboard.css").toExternalForm());
+        Scene scene = new Scene(root);
+        primaryStage.setTitle("Game");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+
+    }
+
     private void set_second_plater_button()
     {
         button_structure_2[0][0].set_button(button_0_0);
@@ -782,6 +1045,7 @@ public class Game_Screen implements Initializable
         button_7_6 = button_structure_2[7][6].button;
         button_7_7 = button_structure_2[7][7].button;
     }
+
 
     public void show_scores(ActionEvent actionEvent) throws IOException
     {

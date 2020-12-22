@@ -21,6 +21,7 @@ import java.util.ResourceBundle;
 public class High_Scores implements Initializable
 {
     @FXML Label data;
+    @FXML Label scores_data;
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
@@ -35,23 +36,24 @@ public class High_Scores implements Initializable
             //System.out.println(Arrays.toString(string_data.split(",")));
             String array[] = string_data.split(",");
             int j=0;
-            String label_data = "";
-
+            String scores = "";
+            String names = "";
             for (String temp: array)
             {
                 if(j%2==1)
                 {
-                    label_data+=(temp+"\n");
+                    scores+=(temp+"\n\n");
                 }
                 else
                 {
-                    label_data+=(temp+"\t\t\t\t\t\t\t ");
+                    names+=(temp+"\n");
                 }
-                System.out.print(++j+" "+temp+" ");
+              //  System.out.print(++j+" "+temp+" ");
             }
             //data.setText("ashdjkash \nkj");
-            data.setText(label_data);
-            System.out.print(label_data);
+            data.setText(names);
+            scores_data.setText(scores);
+            //System.out.print(scores);
         } catch (IOException exception) {
             exception.printStackTrace();
         }

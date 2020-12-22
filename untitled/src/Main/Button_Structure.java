@@ -5,6 +5,7 @@ import Ships.Carrier;
 import Ships.Ship;
 import Ships.SubMarine;
 import javafx.scene.control.Button;
+import javafx.scene.paint.Paint;
 
 public class Button_Structure
 {
@@ -43,22 +44,28 @@ public class Button_Structure
             touchable = false;
             if(ship.decrease_size())
             {
-                System.out.println(ship.get_size());
+               // System.out.println(ship.get_size());
                 if(ship instanceof Carrier)
                 {
                     button_1.setStyle("-fx-background-color: pink");
+                    button_1.setTextFill(Paint.valueOf("0xFAAFBE"));
                 }
                 if(ship instanceof BattleShip)
                 {
                     button_1.setStyle("-fx-background-color: lightgreen");
+                    button_1.setTextFill(Paint.valueOf("0x90ee90"));
+
                 }
                 if(ship instanceof SubMarine)
                 {
                     button_1.setStyle("-fx-background-color: yellow");
+                    button_1.setTextFill(Paint.valueOf("0xFFFF00"));
+
                 }
                 if(ship instanceof SubMarine)
                 {
                     button_1.setStyle("-fx-background-color: white");
+                    button_1.setTextFill(Paint.valueOf("0xFFFFFF"));
                 }
                 return true;
             }
