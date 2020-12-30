@@ -13,12 +13,21 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * This class is used as controller for the Chose_Ship_Placement
+ * to Select whether the ship placement should be done randomly or using filing
+ */
 public class Chose_Ship_Placement
 {
     @FXML RadioButton random;
     @FXML RadioButton using_filing;
     private Alert alert;
 
+    /**
+     * This function is used to open the Selection Screen
+     * @param actionEvent
+     * @throws IOException
+     */
     public void back_to_screen(ActionEvent actionEvent) throws IOException
     {
 
@@ -32,6 +41,10 @@ public class Chose_Ship_Placement
         primaryStage.show();
     }
 
+    /**
+     * apply function checks which radio buttons is selected and sets GameScreen static member
+     * @param actionEvent
+     */
     public void apply(ActionEvent actionEvent)
     {
         if(using_filing.isSelected())

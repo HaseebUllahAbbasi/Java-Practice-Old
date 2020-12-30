@@ -12,6 +12,11 @@ import java.io.IOException;
 public class Rules
 {
 
+    /**
+     * function loads the main Selection screen
+     * @param actionEvent
+     * @throws IOException
+     */
     public void back(ActionEvent actionEvent) throws IOException {
         ((Node) actionEvent.getSource()).getScene().getWindow().hide();
         Stage primaryStage = new Stage();

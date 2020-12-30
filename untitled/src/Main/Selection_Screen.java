@@ -16,6 +16,10 @@ public class Selection_Screen
     @FXML TextField rows;
     @FXML TextField columns;
 
+    /**
+     * increase the rows
+     * @param actionEvent
+     */
     public void increase_rows(ActionEvent actionEvent)
     {
         int row = (Integer.parseInt(rows.getText())+1);
@@ -23,6 +27,10 @@ public class Selection_Screen
             rows.setText(String.valueOf(row));
     }
 
+    /**
+     * decrease  the rows
+     * @param actionEvent
+     */
     public void decrease_rows(ActionEvent actionEvent)
     {
         int row = (Integer.parseInt(rows.getText())-1);
@@ -31,6 +39,11 @@ public class Selection_Screen
 
     }
 
+
+    /**
+     * increase  the columns
+     * @param actionEvent
+     */
     public void increase_col(ActionEvent actionEvent)
     {
         int col = (Integer.parseInt(columns.getText())+1);
@@ -38,6 +51,10 @@ public class Selection_Screen
             columns.setText(String.valueOf(col));
     }
 
+    /**
+     * decrease  the columns
+     * @param actionEvent
+     */
     public void decrease_col(ActionEvent actionEvent)
     {
         int col = (Integer.parseInt(columns.getText())-1);
@@ -46,6 +63,11 @@ public class Selection_Screen
 
     }
 
+    /**
+     * loads the game screen
+     * @param actionEvent
+     * @throws IOException
+     */
     public void game_screen(ActionEvent actionEvent) throws IOException {
         ((Node) actionEvent.getSource()).getScene().getWindow().hide();
         Stage primaryStage = new Stage();
@@ -59,11 +81,20 @@ public class Selection_Screen
 
     }
 
+    /**
+     * exits the game screen
+     * @param actionEvent
+     */
     public void exit_game(ActionEvent actionEvent)
     {
         System.exit(1);
     }
 
+    /**
+     * loads the high score screen
+     * @param actionEvent
+     * @throws IOException
+     */
     public void high_scores(ActionEvent actionEvent) throws IOException {
         ((Node) actionEvent.getSource()).getScene().getWindow().hide();
         Stage primaryStage = new Stage();
@@ -75,6 +106,12 @@ public class Selection_Screen
         primaryStage.setScene(scene);
         primaryStage.show();
     }
+
+    /**
+     * loads the score changing screen
+     * @param actionEvent
+     * @throws IOException
+     */
 
     public void change_scores(ActionEvent actionEvent) throws IOException
     {
@@ -90,6 +127,11 @@ public class Selection_Screen
 
     }
 
+    /**
+     * lads the selecting placement screen
+     * @param actionEvent
+     * @throws IOException
+     */
     public void chose_placement(ActionEvent actionEvent) throws IOException {
         ((Node) actionEvent.getSource()).getScene().getWindow().hide();
         Stage primaryStage = new Stage();
@@ -104,6 +146,11 @@ public class Selection_Screen
 
     }
 
+    /**
+     * loads the rules screen
+     * @param actionEvent
+     * @throws IOException
+     */
     public void rules(ActionEvent actionEvent) throws IOException {
         ((Node) actionEvent.getSource()).getScene().getWindow().hide();
         Stage primaryStage = new Stage();

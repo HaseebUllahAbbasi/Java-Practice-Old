@@ -14,7 +14,6 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
 import java.io.*;
 import java.net.URL;
@@ -94,6 +93,9 @@ public class Game_Screen implements Initializable
     @FXML Button button_7_5;
     @FXML Button button_7_6;
     @FXML Button button_7_7;
+    /**
+     * These are arrays , both arrays are for different players to store and analyze data
+     */
     Button_Structure[][] button_structure_1 = new Button_Structure[8][8];
     Button_Structure[][] button_structure_2 = new Button_Structure[8][8];
     @FXML Label player_status;
@@ -101,6 +103,11 @@ public class Game_Screen implements Initializable
     static int player_one_score = 100;
     static int player_two_score = 100;
 
+    /**
+     * quit_game function quit the game and returns to Selection Screen
+     * @param actionEvent
+     * @throws IOException
+     */
     public void quit_game(ActionEvent actionEvent) throws IOException
     {
         ((Node) actionEvent.getSource()).getScene().getWindow().hide();
@@ -118,6 +125,14 @@ public class Game_Screen implements Initializable
     static int score_2 = 0;
     int destroyed_points_1=0;
     int destroyed_points_2=0;
+
+    /**
+     * initialize function is called when the form is loaded
+     * this function initializes the 64 buttons properties for each player
+     * then checks the placing of ships if random the calls the random functions or using filing
+     * @param location
+     * @param resources
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
@@ -137,6 +152,9 @@ public class Game_Screen implements Initializable
         }
         if(random_data)
         {
+            /**
+             * Ships are placed randomly
+             */
             create_carriers(button_structure_1);
             create_carriers(button_structure_2);
             create_battleship(button_structure_1);
@@ -148,6 +166,9 @@ public class Game_Screen implements Initializable
         }
         else
         {
+            /**
+             * Ships are placed using filing
+             */
             int input = 0;
             String data = "";
             FileReader fileReader = null;
@@ -415,6 +436,13 @@ public class Game_Screen implements Initializable
         button_structure_1[7][7].set_button(button_7_7);
     }
 
+    /**
+     * creates destroyer for the provided player after checking
+     * @param array
+     * array : structure for a player 1 or 2
+     * @param paths
+     *  paths : where to place the ships
+     */
     private void create_destroyer(Button_Structure[][] array, String[]... paths)
     {
         Ship ship = new Destroyer();
@@ -424,6 +452,13 @@ public class Game_Screen implements Initializable
         }
     }
 
+    /**
+     * creates battleship for the provided player after checking
+     * @param array
+     * array : structure for a player 1 or 2
+     * @param paths
+     *  paths : where to place the ships
+     */
     private void create_battleship(Button_Structure[][] array, String[]... paths)
     {
         Ship ship = new BattleShip();
@@ -433,6 +468,13 @@ public class Game_Screen implements Initializable
         }
     }
 
+    /**
+     * creates submarine for the provided player after checking
+     * @param array
+     * array : structure for a player 1 or 2
+     * @param paths
+     *  paths : where to place the ships
+     */
     private void create_submarine(Button_Structure[][] array,String[]... paths)
     {
         Ship ship = new SubMarine();
@@ -442,6 +484,13 @@ public class Game_Screen implements Initializable
         }
     }
 
+    /**
+     * creates carrier for the provided player
+     * @param array
+     * array : structure for a player 1 or 2
+     * @param paths
+     *  paths : where to place the ships
+     */
     void create_carriers(Button_Structure[][] array,String[]... paths)
     {
         Ship ship = new Carrier();
@@ -451,6 +500,11 @@ public class Game_Screen implements Initializable
         }
     }
 
+    /**
+     * creates carrier for the provided player randomly
+     * @param array
+     * array : structure for a player 1 or 2
+     */
     private void create_destroyer(Button_Structure[][] array)
     {
 
@@ -481,6 +535,14 @@ public class Game_Screen implements Initializable
         }
     }
 
+    /**
+     * take the array and checks whether there is no submarine ahead
+     * @param array
+     * @param ship_no_row
+     * @param ship_no_col
+     * @param size
+     * @return
+     */
     private boolean check_submarine_row(Button_Structure[][] array, int ship_no_row, int ship_no_col, int size)
     {
         for(int i=ship_no_row; i<ship_no_row+size; i++)
@@ -493,6 +555,14 @@ public class Game_Screen implements Initializable
     }
 
 
+    /**
+     * take the array and checks whether there is no submarine ahead
+     * @param array
+     * @param ship_no_row
+     * @param ship_no_col
+     * @param size
+     * @return
+     */
     private boolean check_submarine_col(Button_Structure[][] array, int ship_no_row, int ship_no_col, int size)
     {
         for(int i=ship_no_col; i<ship_no_col+size; i++)
@@ -503,6 +573,10 @@ public class Game_Screen implements Initializable
         return false;
     }
 
+    /**
+     * take the array and place the submarine in the array randomly
+     * @param array
+     */
     private void create_submarine(Button_Structure[][] array)
     {
         Ship carrier_1 = new SubMarine();
@@ -532,6 +606,14 @@ public class Game_Screen implements Initializable
         }
     }
 
+    /**
+     * take the array and check the next is not battleship
+     * @param array
+     * @param ship_no_row
+     * @param ship_no_col
+     * @param size
+     * @return
+     */
     private boolean check_battleship_col(Button_Structure[][] array, int ship_no_row, int ship_no_col,int size)
     {
         for(int i=ship_no_row; i<ship_no_row+size; i++)
@@ -542,6 +624,14 @@ public class Game_Screen implements Initializable
         return false;
     }
 
+    /**
+     * take the array and check the next is not battleship
+     * @param array
+     * @param ship_no_row
+     * @param ship_no_col
+     * @param size
+     * @return
+     */
     private boolean check_battleship_row(Button_Structure[][] array, int ship_no_row, int ship_no_col,int size)
     {
         for(int i=ship_no_col; i<ship_no_col+size; i++)
@@ -552,6 +642,10 @@ public class Game_Screen implements Initializable
         return false;
     }
 
+    /**
+     * takes the array and place battleship randomly
+     * @param array
+     */
     private void create_battleship(Button_Structure[][] array)
     {
         Ship carrier_1 = new BattleShip();
@@ -581,6 +675,14 @@ public class Game_Screen implements Initializable
         }
     }
 
+    /**
+     * checks the array whether the next is carrier  or not
+     * @param array
+     * @param ship_no_row
+     * @param ship_no_col
+     * @param size
+     * @return
+     */
     private boolean check_carrier_col(Button_Structure[][] array, int ship_no_row, int ship_no_col,int size)
     {
         for(int i=ship_no_row; i<ship_no_row+size; i++)
@@ -591,6 +693,14 @@ public class Game_Screen implements Initializable
         return false;
     }
 
+    /**
+     * checks the array whether the next is carrier  or not
+     * @param array
+     * @param ship_no_row
+     * @param ship_no_col
+     * @param size
+     * @return
+     */
     private boolean check_carrier_row(Button_Structure[][] array, int ship_no_row, int ship_no_col,int size)
     {
         for(int i=ship_no_col; i<ship_no_col+size; i++)
@@ -601,6 +711,10 @@ public class Game_Screen implements Initializable
         return false;
     }
 
+    /**
+     * takes the array and place carrier randomly
+     * @param array
+     */
     private void create_carriers(Button_Structure array[][])
     {
         Ship carrier_1 = new Carrier();
@@ -620,6 +734,11 @@ public class Game_Screen implements Initializable
             }
     }
 
+    /**
+     * action is triggered whenever button is pressed
+     * @param actionEvent
+     * @throws IOException
+     */
     public void perform_action(ActionEvent actionEvent) throws IOException {
         Button btn =((Button)actionEvent.getSource());
        // System.out.print(btn.getTextFill());
@@ -731,6 +850,11 @@ public class Game_Screen implements Initializable
         }
     }
 
+    /**
+     *funtion is called when all the buttons are pressed and no one wins, then considered draw
+     * @param actionEvent
+     * @throws IOException
+     */
     private void draw_game(ActionEvent actionEvent) throws IOException
     {
         alert = new Alert(Alert.AlertType.CONFIRMATION,"The Game is Draw",ButtonType.FINISH);
@@ -748,6 +872,9 @@ public class Game_Screen implements Initializable
 
     }
 
+    /**
+     * set the buttons for the second player
+     */
     private void set_second_plater_button()
     {
         button_structure_2[0][0].set_button(button_0_0);
@@ -823,6 +950,10 @@ public class Game_Screen implements Initializable
         button_structure_2[7][7].set_button(button_7_7);
 
     }
+
+    /**
+     * set the buttons for the first player
+     */
     private void set_first_plater_button()
     {
         button_structure_1[0][0].set_button(button_0_0);
@@ -897,6 +1028,10 @@ public class Game_Screen implements Initializable
         button_structure_1[7][6].set_button(button_7_6);
         button_structure_1[7][7].set_button(button_7_7);
     }
+
+    /**
+     * loads the buttons of the first player
+     */
     private void load_first_player_buttons()
     {
         button_0_0 = button_structure_1[0][0].button;
@@ -971,6 +1106,10 @@ public class Game_Screen implements Initializable
         button_7_6 = button_structure_1[7][6].button;
         button_7_7 = button_structure_1[7][7].button;
     }
+
+    /**
+     * loads the buttons of the sceond player
+     */
     private void load_second_player_buttons()
     {
         button_0_0 = button_structure_2[0][0].button;
@@ -1047,6 +1186,11 @@ public class Game_Screen implements Initializable
     }
 
 
+    /**
+     * function  brings the screen of the high scores
+     * @param actionEvent
+     * @throws IOException
+     */
     public void show_scores(ActionEvent actionEvent) throws IOException
     {
         ((Node) actionEvent.getSource()).getScene().getWindow().hide();

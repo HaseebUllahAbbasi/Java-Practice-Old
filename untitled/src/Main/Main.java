@@ -8,6 +8,11 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    /**
+     * the starting point of the program
+     * @param primaryStage
+     * @throws Exception
+     */
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("Selection_Screen.fxml"));

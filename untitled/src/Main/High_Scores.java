@@ -22,6 +22,14 @@ public class High_Scores implements Initializable
 {
     @FXML Label data;
     @FXML Label scores_data;
+
+    /**
+     * function is called when the form is loaded
+     * the scores are read from the files and displayed on the screen
+     *
+     * @param location
+     * @param resources
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
@@ -60,6 +68,11 @@ public class High_Scores implements Initializable
 
     }
 
+    /**
+     * the function is called to go the main Selection Screen
+     * @param actionEvent
+     * @throws IOException
+     */
     public void game_screen(ActionEvent actionEvent) throws IOException {
         ((Node) actionEvent.getSource()).getScene().getWindow().hide();
         Stage primaryStage = new Stage();
