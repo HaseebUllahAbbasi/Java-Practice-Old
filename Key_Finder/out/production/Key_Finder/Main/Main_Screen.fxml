@@ -70,32 +70,37 @@
    <Button layoutX="511.0" layoutY="375.0" mnemonicParsing="false" onAction="#check_key" prefHeight="39.0" prefWidth="100.0" style="-fx-background-color: silver;" text="7 5" textFill="SILVER" />
    <Button layoutX="613.0" layoutY="375.0" mnemonicParsing="false" onAction="#check_key" prefHeight="39.0" prefWidth="100.0" style="-fx-background-color: silver;" text="7 6" textFill="SILVER" />
    <Button layoutX="715.0" layoutY="375.0" mnemonicParsing="false" onAction="#check_key" prefHeight="39.0" prefWidth="100.0" style="-fx-background-color: silver;" text="7 7" textFill="SILVER" />
-   <Button layoutX="39.0" layoutY="24.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="100.0" style="-fx-background-color: red;" text="1" textFill="SILVER">
+   <Button layoutX="11.0" layoutY="24.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="100.0" style="-fx-background-color: red;" text="1" textFill="SILVER">
       <font>
          <Font name="System Bold" size="23.0" />
       </font>
    </Button>
-   <Button layoutX="153.0" layoutY="24.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="100.0" style="-fx-background-color: CRIMSON;" text="2" textFill="WHITE">
+   <Button layoutX="125.0" layoutY="24.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="100.0" style="-fx-background-color: CRIMSON;" text="2" textFill="WHITE">
       <font>
          <Font size="23.0" />
       </font>
    </Button>
-   <Button layoutX="279.0" layoutY="24.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="100.0" style="-fx-background-color: pink;" text="3" textFill="WHITE">
+   <Button layoutX="251.0" layoutY="24.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="100.0" style="-fx-background-color: pink;" text="3" textFill="WHITE">
       <font>
          <Font size="23.0" />
       </font>
    </Button>
-   <Button layoutX="394.0" layoutY="24.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="100.0" style="-fx-background-color: purple;" text="4" textFill="WHITE">
+   <Button layoutX="366.0" layoutY="24.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="100.0" style="-fx-background-color: purple;" text="4" textFill="WHITE">
       <font>
          <Font size="23.0" />
       </font>
    </Button>
-   <Button layoutX="524.0" layoutY="24.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="100.0" style="-fx-background-color: lightblue;" text="5" textFill="WHITE">
+   <Button layoutX="496.0" layoutY="24.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="100.0" style="-fx-background-color: lightblue;" text="5" textFill="WHITE">
       <font>
          <Font size="23.0" />
       </font>
    </Button>
-   <Label fx:id="counter" layoutX="674.0" layoutY="33.0" text="Counter">
+   <Label fx:id="counter" layoutX="613.0" layoutY="33.0" text="Counter">
+      <font>
+         <Font size="22.0" />
+      </font>
+   </Label>
+   <Label fx:id="avg" layoutX="715.0" layoutY="33.0" text="0">
       <font>
          <Font size="22.0" />
       </font>

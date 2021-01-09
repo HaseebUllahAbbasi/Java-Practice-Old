@@ -1,3 +1,5 @@
+
+/*
 package swing_experiment;
 
 import javax.swing.*;
@@ -236,3 +238,4 @@ class TextPanel {
 
 }
 
+*/
