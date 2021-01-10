@@ -77,7 +77,7 @@ public class Controller implements Initializable
         else if((i==index_i&&j==index_j-4) || (i==index_i-4&&j==index_j) || (i==index_i&&j==index_j+4) || ( i==index_i+4&&j==index_j) ||  floor_val == 4)
         {
             btn.setStyle("-fx-background-color: purple");
-            btn.setTextFill(Paint.valueOf("0xB19CD9"));
+            btn.setTextFill(Paint.valueOf("0xb19cd9"));
         }
         else
         {
