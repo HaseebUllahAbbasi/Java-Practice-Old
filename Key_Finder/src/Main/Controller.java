@@ -9,6 +9,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
@@ -24,7 +26,8 @@ public class Controller implements Initializable
     public Label avg;
     int index_i;
     int index_j;
-    public void check_key(ActionEvent actionEvent) throws IOException {
+    public void check_key(ActionEvent actionEvent) throws IOException
+    {
         Button btn = (Button) actionEvent.getSource();
         String btn_text[] = btn.getText().split( " ");
         System.out.print(btn_text[0]+" i ,  "+  btn_text[1]+" j");
@@ -36,8 +39,16 @@ public class Controller implements Initializable
         int floor_val = (int) Math.floor(distance);
         if(i==index_i&&j==index_j)
         {
-            btn.setStyle("-fx-background-color: yellow");
+
+
+            Image img = new Image("Resources/key_48px.png");
+            ImageView view = new ImageView(img);
+            //view.setSmooth(true);
+            view
+                    .setFitHeight(37.0);
+            btn.setGraphic(view);
             btn.setTextFill(Paint.valueOf("0xFFFF00"));
+            btn.setStyle("-fx-background-color: yellow");
             Alert alert;
             alert = new Alert(Alert.AlertType.INFORMATION, "Found the key ", ButtonType.OK);
             alert.showAndWait();
@@ -55,8 +66,6 @@ public class Controller implements Initializable
                 primaryStage.setScene(scene);
                 primaryStage.show();
             }
-
-
             return;
         }
         else if((i==index_i&&j==index_j-1) || (i==index_i-1&&j==index_j) || (i==index_i&&j==index_j+1) || ( i==index_i+1 &&j==index_j) || floor_val == 1)
@@ -77,24 +86,22 @@ public class Controller implements Initializable
         else if((i==index_i&&j==index_j-4) || (i==index_i-4&&j==index_j) || (i==index_i&&j==index_j+4) || ( i==index_i+4&&j==index_j) ||  floor_val == 4)
         {
             btn.setStyle("-fx-background-color: purple");
-            btn.setTextFill(Paint.valueOf("0xb19cd9"));
+            btn.setTextFill(Paint.valueOf("0x800080"));
         }
         else
         {
-            btn.setStyle("-fx-background-color: blue");
-            btn.setTextFill(Paint.valueOf("0x0080FF"));
+            btn.setStyle("-fx-background-color: lightblue");
+            btn.setTextFill(Paint.valueOf("0xADD8E6"));
         }
         counter_num++;
         counter.setText(String.valueOf(counter_num));
     }
-
     private void set_counter(int i, int counter_num)
     {
         attempt = i;
     }
-
     int attempt;
-int counter_num = 0;
+    int counter_num = 0;
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
