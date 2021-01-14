@@ -3,6 +3,7 @@ package Mail_Practice;
 
 public class Mail_Sending
 {
+
     /*
     public static void main(String [] args){
         String to = "haseebabbasi00@gmail.com";//change accordingly
@@ -28,6 +29,8 @@ public class Mail_Sending
 
         }catch (MessagingException mex) {mex.printStackTrace();}
     }
-    
+
      */
+    
+
 }
