@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mail in Java</title>
+</head>
+<body>
+    <h1>
+        Intro
+    </h1>
+    <article>
+        <div>The JavaMail is an API that is used to compose, write and read electronic messages (emails).</div>
+        <div>javax.mail and javax.mail.activation packages contains the core classes of JavaMail API</div>
+        <br>
+        <table>
+            <tbody><tr><td>There are some protocols that are used in JavaMail API.
+                <ul>
+                    <li>SMTP</li>
+                    <li>POP</li>
+                    <li>IMAP</li>
+                    <li>MIME</li>
+                    <li>NNTP and others</li>
+                </ul>
+            </td></tr>
+            </tbody>
+        </table>
+    </article>
+    <article>
+        <h2>Java Mail Architecture</h2>
+        <p>The java application uses JavaMail API to compose, send and receive emails. The JavaMail API uses SPI (Service Provider Interfaces) that provides the intermediatory services to the java application to deal with the different protocols. Let's understand it with the figure given below:</p>
+        <img src="https://static.javatpoint.com/images/Javamail1.jpg" alt="JavaMail API Architecture">
+
+        <h4>Core Packages, Classes</h4>
+        <ul>
+            <li>javax.mail.Session class</li>
+            <li>javax.mail.Message class</li>
+            <li>javax.mail.internet.MimeMessage class</li>
+            <li>javax.mail.Address class</li>
+            <li>javax.mail.internet.InternetAddress class</li>
+            <li>javax.mail.Authenticator class</li>
+            <li>javax.mail.PasswordAuthentication class</li>
+            <li>javax.mail.Transport class</li>
+            <li>javax.mail.Store class</li>
+            <li>javax.mail.Folder class etc.</li>
+
+        </ul>
+    </article>
+
+
+</body>
+</html>
