@@ -1,0 +1,12 @@
+﻿
+abdomen		پیٹ		  
+bat	چمگادڑ   /  کرکٹ کا بلا
+cat	بلی
+dog	کتا
+elect	چننا	
+baby	بچه
+inside	اندر
+student	طالب علم
+teacher	استاد
+abstract	خلاصہ	
+search	 تلاش
