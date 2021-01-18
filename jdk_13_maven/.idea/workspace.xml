@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="824619d7-b67e-4daf-8626-5e0d03ac6c8a" name="Default Changelist" comment="Score Api App Using JSON" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1n200EXwYzSDPdlUPtWzmfShfzs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/Cric_Buzz_API/java-json.jar" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PeaceSeeker\Documents\IdeaProjects\jdk_13_maven\src\main\java\Cric_Buzz_API" />
+      <recent name="C:\Users\PeaceSeeker\Documents\jdk_13_maven\src\main\java" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Scrapping_Practice" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Demo">
+    <configuration name="CoronaData" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Scrapping_Practice.CoronaData" />
+      <module name="jdk_13_maven" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Cric_Buzz_API.Demo" />
+      <module name="jdk_13_maven" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Urdu_Practice.Main" />
+      <module name="jdk_13_maven" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Score_Api.Main" />
+      <module name="jdk_13_maven" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Scrapping_Practice.Main" />
+      <module name="jdk_13_maven" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Demo" />
+        <item itemvalue="Application.Main (2)" />
+        <item itemvalue="Application.CoronaData" />
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="824619d7-b67e-4daf-8626-5e0d03ac6c8a" name="Default Changelist" comment="" />
+      <created>1610572653332</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610572653332</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Mail Sending Successfully">
+      <created>1610600595409</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610600595409</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="Mail Sending Successfully" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mail Sending Successfully" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="597" y="239" key="#Web_Browsers" timestamp="1610601639913">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="597" y="239" key="#Web_Browsers/0.0.1600.900@0.0.1600.900" timestamp="1610601639913" />
+    <state x="254" y="105" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610619808504">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="254" y="105" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.900@0.0.1600.900" timestamp="1610619808504" />
+    <state x="605" y="156" key="#com.intellij.ide.util.MemberChooser" timestamp="1610574742424">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="605" y="156" key="#com.intellij.ide.util.MemberChooser/0.0.1600.900@0.0.1600.900" timestamp="1610574742424" />
+    <state x="580" y="205" key="FileChooserDialogImpl" timestamp="1610892195594">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="580" y="205" key="FileChooserDialogImpl/0.0.1600.900@0.0.1600.900" timestamp="1610892195594" />
+    <state width="1044" height="235" key="GridCell.Tab.0.bottom" timestamp="1610894344426">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state width="1044" height="235" key="GridCell.Tab.0.bottom/0.0.1600.900@0.0.1600.900" timestamp="1610894344426" />
+    <state width="1044" height="235" key="GridCell.Tab.0.center" timestamp="1610894344426">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state width="1044" height="235" key="GridCell.Tab.0.center/0.0.1600.900@0.0.1600.900" timestamp="1610894344426" />
+    <state width="1044" height="235" key="GridCell.Tab.0.left" timestamp="1610894344426">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state width="1044" height="235" key="GridCell.Tab.0.left/0.0.1600.900@0.0.1600.900" timestamp="1610894344426" />
+    <state width="1044" height="235" key="GridCell.Tab.0.right" timestamp="1610894344426">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state width="1044" height="235" key="GridCell.Tab.0.right/0.0.1600.900@0.0.1600.900" timestamp="1610894344426" />
+    <state x="330" y="105" key="Maven.ArtifactSearchDialog" timestamp="1610892159191">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="330" y="105" key="Maven.ArtifactSearchDialog/0.0.1600.900@0.0.1600.900" timestamp="1610892159191" />
+    <state x="280" y="24" key="SettingsEditor" timestamp="1610892198892">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="280" y="24" key="SettingsEditor/0.0.1600.900@0.0.1600.900" timestamp="1610892198892" />
+    <state x="392" y="183" key="Vcs.Push.Dialog.v2" timestamp="1610600810003">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="392" y="183" key="Vcs.Push.Dialog.v2/0.0.1600.900@0.0.1600.900" timestamp="1610600810003" />
+    <state x="456" y="205" key="run.anything.popup" timestamp="1610688642925">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="456" y="205" key="run.anything.popup/0.0.1600.900@0.0.1600.900" timestamp="1610688642925" />
+  </component>
+</project>

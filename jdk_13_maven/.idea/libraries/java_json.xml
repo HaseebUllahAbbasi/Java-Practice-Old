@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="java-json">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/main/java/Cric_Buzz_API/java-json.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/src/main/java/Cric_Buzz_API/java-json.jar!/" />
+    </SOURCES>
+  </library>
+</component>
