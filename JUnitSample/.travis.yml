@@ -1,0 +1,14 @@
+language: java
+
+jdk:
+- oraclejdk8
+script:
+- mvn compile
+- mvn test
+deploy:
+  provider: heroku
+  api_key:
+    secure: "CwdmQFbvI6q+Hu7Fr39nSLrN/uPx+Z9Klz45O4Yxdt6u1vny8P8wU7eVC3ELNMxbOvvmzr9OBos9SGh+qNL85gLgfDCUrvxHEetFPWWQqmKgptWt0m5PlvKg5lEoK85my8IXSEqRvr3Gyi0kd5dwtRbQHG/iYwrDdAkf3/sdIDRvXxgsUoQNYon+IQL5H7dE5AzDYJJIf2QTJ/KKdp3/NaQockuO9aZpTpD8tzo1tB6CHskhBoPTFUR1AcVmrZkRxbEDJJPLoXam95F/qs35feScBkByT24OrAVMsPwya2QFAPpHMAjnHUdukt0tNXF6BtAIXrnbHcIt6+gsHqe+/jXzc/IZM/MlpvNn1Vc2TkXdBvj4jkqjow6Sedhe0oNi9cQp5DvY6zHGkXwzR8F/3BETzxVLqA8P0ujkdfmRcrZ6v0Iz5yIIAcC0ffck+ul5Fi0+uFOF7/Qu6EKx/6yuhKjdUH3DzgwnqN3q4noeXT63h2yivishDZ3TfrlYLJkdVpY47zJZPAH/VvGGOpJxaBaIUvv6jCddC7aKEPMm+XUCTDtU5sLIE3SUoXp0Kwl2FZgxqWu5JcWLyOt/An+TGVxSGJ3hNnvZUWjRGcl/uncltW4XlOgIf63lcLPqgPRYdD2l/TYoNf+qC7AIaWkNOJg02Bjlg7QkXhA5GiNVlns="
+  app: maven-glassfish-junit-sample
+  on:
+    repo: Toulouse-Exia-A4/JUnitSample
