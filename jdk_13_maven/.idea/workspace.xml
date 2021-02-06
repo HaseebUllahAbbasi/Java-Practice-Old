@@ -13,7 +13,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="824619d7-b67e-4daf-8626-5e0d03ac6c8a" name="Default Changelist" comment="Score Api App Using JSON" />
+    <list default="true" id="824619d7-b67e-4daf-8626-5e0d03ac6c8a" name="Default Changelist" comment="Score Api App Using JSON">
+      <change afterPath="$PROJECT_DIR$/../Key_Finder/out/production/Key_Finder/Main/Resources/home_48px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../q" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Cric_Buzz_API/Demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Cric_Buzz_API/Demo.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,6 +75,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CricBuzzParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Cric_Buzz_API.CricBuzzParser" />
+      <module name="jdk_13_maven" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Cric_Buzz_API.Demo" />
       <module name="jdk_13_maven" />
@@ -91,20 +103,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Scrapping_Practice.Main" />
-      <module name="jdk_13_maven" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Demo" />
+        <item itemvalue="Application.CricBuzzParser" />
         <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.CoronaData" />
         <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -163,22 +168,22 @@
       <screen x="0" y="0" width="1600" height="900" />
     </state>
     <state x="580" y="205" key="FileChooserDialogImpl/0.0.1600.900@0.0.1600.900" timestamp="1610892195594" />
-    <state width="1044" height="235" key="GridCell.Tab.0.bottom" timestamp="1610894344426">
+    <state width="1125" height="235" key="GridCell.Tab.0.bottom" timestamp="1611747468992">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state width="1044" height="235" key="GridCell.Tab.0.bottom/0.0.1600.900@0.0.1600.900" timestamp="1610894344426" />
-    <state width="1044" height="235" key="GridCell.Tab.0.center" timestamp="1610894344426">
+    <state width="1125" height="235" key="GridCell.Tab.0.bottom/0.0.1600.900@0.0.1600.900" timestamp="1611747468992" />
+    <state width="1125" height="235" key="GridCell.Tab.0.center" timestamp="1611747468992">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state width="1044" height="235" key="GridCell.Tab.0.center/0.0.1600.900@0.0.1600.900" timestamp="1610894344426" />
-    <state width="1044" height="235" key="GridCell.Tab.0.left" timestamp="1610894344426">
+    <state width="1125" height="235" key="GridCell.Tab.0.center/0.0.1600.900@0.0.1600.900" timestamp="1611747468992" />
+    <state width="1125" height="235" key="GridCell.Tab.0.left" timestamp="1611747468992">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state width="1044" height="235" key="GridCell.Tab.0.left/0.0.1600.900@0.0.1600.900" timestamp="1610894344426" />
-    <state width="1044" height="235" key="GridCell.Tab.0.right" timestamp="1610894344426">
+    <state width="1125" height="235" key="GridCell.Tab.0.left/0.0.1600.900@0.0.1600.900" timestamp="1611747468992" />
+    <state width="1125" height="235" key="GridCell.Tab.0.right" timestamp="1611747468992">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state width="1044" height="235" key="GridCell.Tab.0.right/0.0.1600.900@0.0.1600.900" timestamp="1610894344426" />
+    <state width="1125" height="235" key="GridCell.Tab.0.right/0.0.1600.900@0.0.1600.900" timestamp="1611747468992" />
     <state x="330" y="105" key="Maven.ArtifactSearchDialog" timestamp="1610892159191">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
@@ -191,9 +196,9 @@
       <screen x="0" y="0" width="1600" height="900" />
     </state>
     <state x="392" y="183" key="Vcs.Push.Dialog.v2/0.0.1600.900@0.0.1600.900" timestamp="1610600810003" />
-    <state x="456" y="205" key="run.anything.popup" timestamp="1610688642925">
+    <state x="456" y="205" key="run.anything.popup" timestamp="1611747405842">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state x="456" y="205" key="run.anything.popup/0.0.1600.900@0.0.1600.900" timestamp="1610688642925" />
+    <state x="456" y="205" key="run.anything.popup/0.0.1600.900@0.0.1600.900" timestamp="1611747405842" />
   </component>
 </project>
