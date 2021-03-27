@@ -1,3 +1,5 @@
+package Students_Marks_System;
+
 public class Student
 {
     int id;
