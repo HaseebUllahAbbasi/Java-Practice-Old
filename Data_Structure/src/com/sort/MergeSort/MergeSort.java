@@ -1,6 +1,5 @@
 package com.sort.MergeSort;
 
-import org.jetbrains.annotations.NotNull;
 
 public class MergeSort
 {
@@ -57,7 +56,7 @@ public class MergeSort
         } 
     } 
   
-    static void printArray(@NotNull int arr[])
+    static void printArray( int arr[])
     { 
         int n = arr.length; 
         for (int i = 0; i < n; ++i) 
