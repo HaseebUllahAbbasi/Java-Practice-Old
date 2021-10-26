@@ -1,0 +1,17 @@
+
+
+Simple
+address
+
+Item                Subtotal
+Rice                3($2.19)		$6.57
+Dog                 1($1.69)		$1.69
+Ham                 1($2.29)		$2.29
+
+
+Total $10.549999999999999
+Grand Total: $10.549999999999999
+Payment :$100.0
+Change :$89.45
+Thank you for Shopping With Us 
+See You Soon
